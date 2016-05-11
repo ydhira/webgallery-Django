@@ -1,0 +1,159 @@
+/*#add_image_form{
+    display: none;
+}
+
+#add_image_form_option{
+    display: none;
+}
+
+#add_image_form_drag{
+    display: none;
+}*/
+/*
+#drawing{
+    display: none;
+}
+
+#backButton{
+    display: none;
+}
+*/
+
+h2{
+    margin: 0px 0px 20px 30px;
+    padding-top: 4px;
+    text-align: center;
+    width: 100%;
+    font-size: 48px;
+}
+
+#thumbnail{
+}
+
+.thumbnailPic{
+    padding-left: 260px;
+}
+
+.img_box{
+    margin: 5px;
+    float: left;
+    width: 80px;
+}
+
+.img_box img{
+
+    width: 85px;
+    height: 60px;
+}
+
+#display{
+}
+
+.displayPic{
+}
+
+.imageTitle{
+	font-size: 36px;
+	margin: 50px 50px 20px 0px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin-bottom: 8px;
+}
+
+.img_large {
+	width: 800px;
+    height: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    border: 2px #3C3D3F solid;
+    z-index: 9;
+}
+
+.ImageSource{
+	font-size: 11px;
+	text-align: right;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+#nav_overlay{
+    position:absolute;
+    height: 600px;
+    width: 800px;
+    display:flex;
+    justify-content:space-between;
+    z-index: 10;
+
+}
+
+.nav_button{
+    width:50px;
+    height: 100%;
+    background-image: url('../media/right-arrow26.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#nav_left{
+    float:left;
+    transform: scaleX(-1);
+}
+
+#nav_right{
+    float:right;
+}
+
+/*COMMENT SECTION */
+
+h3{
+    font-weight:lighter;
+    font-size:20px;
+    text-decoration: underline;
+}
+
+#comments{
+    margin: 20px 50px 0px 50px;
+}
+
+.comment_itself{
+    margin-top:20px;
+    display:flex;
+    flex-flow:row wrap;
+}
+
+.user{
+    flex-basis:70%;
+    font-weight:bold;
+}
+
+.date{
+    flex-basis:30%;
+    text-align:right;
+}
+
+.comment_full{
+    margin-top:5px;
+    flex-basis:95%;
+}
+
+#cross_button{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url('../media/button-cross.png');
+    flex-basis:5%;
+    align:right;
+}
+
+.example{
+    float:left;
+    clear:both;
+}
+
+canvas{
+    border: solid black 2px;
+    float: left;
+
+}

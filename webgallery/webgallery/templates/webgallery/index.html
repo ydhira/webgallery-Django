@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html ng-app = "webgallery">
+<head>
+	<title>HW6 solution</title>
+	<link href="/static/style/main.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/style/index.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/style/form.css" rel="stylesheet" type="text/css"/>
+
+    <link src="/static/bower_components/dropzone/dist/basic.css" rel="stylesheet" type="text/css"/>
+    <link src="/static/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
+
+    <script src="/static/bower_components/angular/angular.min.js"></script>
+    <script src="/static/bower_components/dropzone/dist/dropzone.js"></script>
+
+    <script src="/static/app/webgallery.js"></script>
+
+    <script src="/static/app/service/imageService.js"></script>
+    <script src="/static/app/service/userService.js"></script>
+
+
+    <script src="/static/app/controllers/userController.js"></script>
+
+    <script src="/static/app/controllers/galleryController.js"></script>
+    <script src="/static/app/controllers/adminController.js"></script>
+    <script src="/static/app/controllers/loginController.js"></script>
+
+</head>
+
+<body  >
+<div ng-controller="webgalleryController as webctrl">
+    <header>
+        <h1 > {{title}} </h1>
+        <a href="{{buttonUrl}}"><div class="header_button" id="{{buttonClass}}"></div></a>
+    </header>
+
+
+    {% block content %}
+        {% if request.user.is_authenticated %}
+
+
+            <div class="entry" ng-repeat="owner in webctrl.allUsers">
+                <p> <a  href="/main/{$owner.pk$}"> {$ owner.fields.username $} </a></p>
+
+            </div>
+
+
+            <div style = "text-align : right"> <a href = "/logout" > Logout </a> </div> <br>
+
+        {% else %}
+        <p>
+            Please <a href="/login">login</a>
+        </p>
+        {% endif %}
+        <footer>
+            <a href="/credits">credits</a>
+        </footer>
+    {% endblock %}
+</div>
+</body>
+</html>

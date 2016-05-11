@@ -1,0 +1,22 @@
+{
+  "name": "Hira Yasin",
+  "authors": [
+    "hirayd <hira.yasin99@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "dropzone": "^4.3.0"
+  }
+}

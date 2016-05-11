@@ -1,0 +1,23 @@
+{% extends "webgallery/index.html" %}
+{% block content %}
+<div ng-controller="adminController as adminController">
+<form name="add_image_form" class="complex_form" id="add_image_form" ng-submit="adminController.add_image()">
+    <div class="form_title">Add an Image</div>
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" ng-click='adminController.toggle();'>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+    <input type="name" required id="form_imageTitle" class="form_element" placeholder="Enter the image title " ng-model="adminController.image.imageTitle"/>
+    <input type="text" required id="form_imageUrl" class="form_element" placeholder="Enter the image source" ng-model="adminController.image.imageSource"/>
+
+    <input type="url" required id="form_imageSource" class="form_element" placeholder="Enter the image url" ng-model="adminController.image.imageUrl" ng-hide="adminController.uploadMode"/>
+
+    <div ng-show = "adminController.uploadMode" class="dropzone" id="my-awesome-dropzone" dropzone="dropzoneConfig" style="width = 50px ; height = 50px"></div>
+    <input type="submit" class="btn" value="Add"/>
+</form>
+
+</div>
+{% endblock %}
